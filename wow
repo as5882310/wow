@@ -1,0 +1,1 @@
+/script T,F=0,CreateFrame("frame")if X then X=nil else X=function()local t=GetTime()StaticPopup1Button1:Click()if t-T>0.2 then AcceptGroup()T=t end if UnitIsGroupLeader("player")then LeaveParty()end end end F:SetScript("OnUpdate",X)
