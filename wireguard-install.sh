@@ -153,7 +153,7 @@ function installQuestions() {
 	done
 
 	until [[ ${ALLOWED_IPS} =~ ^.+$ ]]; do
-		echo -e "\nWireGuard 使用名为“AllowedIPs”的参数来确定通过 VPN 路由的内容。"
+		echo -e "\nWireGuard uses a parameter called AllowedIPs to determine what is routed over the VPN."
 		read -rp "生成的客户端允许的 IP 列表（保留默认值以路由所有内容）: " -e -i '0.0.0.0/0,::/0' ALLOWED_IPS
 		if [[ ${ALLOWED_IPS} == "" ]]; then
 			ALLOWED_IPS="0.0.0.0/0,::/0"
